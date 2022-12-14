@@ -58,6 +58,27 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>com.microsoft.azure</groupId>
+				<artifactId>azure-webapp-maven-plugin</artifactId>
+				<version>2.7.0</version>
+				<configuration>
+				<subscriptionId>cb599c5d-4360-492d-88a0-4024015ce67a</subscriptionId>
+				<resourceGroup>rg-user01</resourceGroup>
+				<appName>app-cloudworkshop-01</appName>
+				<deployment>
+				<resources>
+					<resource>
+					<type>jar</type>
+					<directory>${project.basedir}/target</directory>
+					<includes>
+					<include>*.jar</include>
+					</includes>
+					</resource>
+				</resources>
+				</deployment>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
